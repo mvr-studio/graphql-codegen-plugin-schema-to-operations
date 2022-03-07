@@ -1,7 +1,7 @@
 {
   "name": "@mvr-studio/graphql-codegen-plugin-schema-to-operations",
   "author": "Tomasz Marciniak <tomek@mvr.studio>",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "main": "dist/index.js",
   "homepage": "https://github.com/mvr-studio/graphql-codegen-plugin-schema-to-operations",
   "bugs": {
@@ -12,6 +12,11 @@
     "url": "https://github.com/mvr-studio/graphql-codegen-plugin-schema-to-operations.git"
   },
   "license": "MIT",
+  "keywords": [
+    "graphql",
+    "graphql-codegen",
+    "codegen"
+  ],
   "scripts": {
     "build": "rimraf dist && tsc",
     "test": "npm run generate:gql && jest",
