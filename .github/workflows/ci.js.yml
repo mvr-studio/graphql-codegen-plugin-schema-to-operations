@@ -7,12 +7,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [17.6]
     steps:
       - uses: actions/checkout@v2
-      - uses: ArtiomTr/jest-coverage-report-action@v2
+      - uses: actions/setup-node@v2
         with:
-          package-manager: yarn
-          test-script: yarn generate:gql && yarn test --ci --json --coverage --testLocationInResults --outputFile=report.json
+          node-version: '17.6'
+      - run: yarn install --immutable --immutable-cache --check-cache
+      - run: yarn generate:gql
+      - run: yarn test
