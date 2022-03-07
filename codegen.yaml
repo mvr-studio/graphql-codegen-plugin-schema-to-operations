@@ -1,0 +1,5 @@
+generates:
+  ./tests/operations.graphql:
+    schema: ./tests/schema.graphql
+    plugins:
+      - ./dist/index.js

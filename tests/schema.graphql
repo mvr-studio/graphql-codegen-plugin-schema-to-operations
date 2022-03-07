@@ -1,0 +1,27 @@
+scalar Date
+
+type AuthResponse {
+  jwt: String!
+}
+
+type Mutation {
+  logInUser(email: String!, password: String!): AuthResponse
+}
+
+type Query {
+  me: User
+}
+
+enum Role {
+  ADMIN
+  USER
+}
+
+type User {
+  createdAt: Date!
+  email: String!
+  id: String!
+  name: String
+  role: Role
+  updatedAt: Date!
+}
