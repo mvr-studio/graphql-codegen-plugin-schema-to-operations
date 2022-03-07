@@ -22,6 +22,61 @@ generates:
 
 That's it. Now you can run the codegen.
 
+## Usage
+
+The plugin will likely transform given schema:
+
+```gql
+scalar Date
+
+type AuthResponse {
+  jwt: String!
+}
+
+type Mutation {
+  logInUser(email: String!, password: String!): AuthResponse
+}
+
+type Query {
+  me: User
+}
+
+enum Role {
+  ADMIN
+  USER
+}
+
+type User {
+  id: String!
+  email: String!
+  name: String
+  role: Role
+  createdAt: Date!
+  updatedAt: Date!
+}
+```
+
+Into following operations:
+
+```gql
+query me_query {
+  me {
+    createdAt
+    email
+    id
+    name
+    role
+    updatedAt
+  }
+}
+
+mutation logInUser_mutation($email: String!, $password: String!) {
+  logInUser(email: $email, password: $password) {
+    jwt
+  }
+}
+```
+
 ## Additional Config
 
 ### depthLimit
