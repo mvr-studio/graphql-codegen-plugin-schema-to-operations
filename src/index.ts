@@ -22,7 +22,7 @@ module.exports = {
           })
         )
       )
-      .join('\n')
+      .join('\n\n')
     const mutations = mutationFields
       .map((mutationName) =>
         cleanDoc(
@@ -34,7 +34,7 @@ module.exports = {
           })
         )
       )
-      .join('\n')
-    return [queries, mutations].join('\n')
+      .join('\n\n')
+    return [queries, mutations].join('\n\n').concat('\n')
   }
 }

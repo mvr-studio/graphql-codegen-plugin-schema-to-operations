@@ -17,7 +17,7 @@ module.exports = {
             field: queryName,
             depthLimit: config.depthLimit || 1
         })))
-            .join('\n');
+            .join('\n\n');
         const mutations = mutationFields
             .map((mutationName) => (0, cleanDoc_1.default)((0, buildOperationForField_1.buildOperationNodeForField)({
             schema,
@@ -25,7 +25,7 @@ module.exports = {
             field: mutationName,
             depthLimit: config.depthLimit || 1
         })))
-            .join('\n');
-        return [queries, mutations].join('\n');
+            .join('\n\n');
+        return [queries, mutations].join('\n\n').concat('\n');
     }
 };

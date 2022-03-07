@@ -11,9 +11,11 @@ exports[`matches the operations.graphql snapshot 1`] = `
     updatedAt
   }
 }
+
 mutation logInUser_mutation($email: String!, $password: String!) {
   logInUser(email: $email, password: $password) {
     jwt
   }
-}"
+}
+"
 `;

@@ -17,7 +17,7 @@ generates:
   operations.graphql:
     schema: ./schema.graphql # or external address pointing to schema
     plugins:
-      - @mvr-studio/graphql-codegen-plugin-schema-to-operations
+      - '@mvr-studio/graphql-codegen-plugin-schema-to-operations'
 ```
 
 That's it. Now you can run the codegen.
@@ -33,7 +33,7 @@ generates:
   operations.graphql:
     schema: ./schema.graphql # or external address pointing to schema
     plugins:
-      - @mvr-studio/graphql-codegen-plugin-schema-to-operations
+      - '@mvr-studio/graphql-codegen-plugin-schema-to-operations'
         depthLimit: 3
 ```
 
