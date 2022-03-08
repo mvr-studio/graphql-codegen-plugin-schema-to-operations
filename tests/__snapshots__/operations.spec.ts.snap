@@ -8,6 +8,12 @@ exports[`matches the operations.graphql snapshot 1`] = `
     id
     name
     role
+    tickets {
+      description
+      id
+      title
+      userId
+    }
     updatedAt
   }
 }

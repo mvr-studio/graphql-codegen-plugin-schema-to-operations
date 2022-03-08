@@ -18,10 +18,19 @@ enum Role {
 }
 
 type User {
-  createdAt: Date!
-  email: String!
   id: String!
+  email: String!
   name: String
   role: Role
+  tickets: [Ticket]
+  createdAt: Date!
   updatedAt: Date!
+}
+
+type Ticket {
+  id: String!
+  title: String!
+  description: String
+  userId: String!
+  user: User
 }

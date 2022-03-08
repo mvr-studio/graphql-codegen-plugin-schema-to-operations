@@ -87,9 +87,10 @@ By default the plugin fetches fields for `depthLimit=1` depth. But the property 
 generates:
   operations.graphql:
     schema: ./schema.graphql # or external address pointing to schema
+    config:
+      depthLimit: 3
     plugins:
       - '@mvr-studio/graphql-codegen-plugin-schema-to-operations'
-        depthLimit: 3
 ```
 
 ## Credits

@@ -1,5 +1,7 @@
 generates:
   ./tests/operations.graphql:
     schema: ./tests/schema.graphql
+    config:
+      depthLimit: 3
     plugins:
       - ./dist/index.js

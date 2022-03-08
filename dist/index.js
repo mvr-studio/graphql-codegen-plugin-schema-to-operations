@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const buildOperationForField_1 = require("./utils/buildOperationForField");
 const cleanDoc_1 = __importDefault(require("./utils/cleanDoc"));
 module.exports = {
-    plugin: (schema, _documents, config) => {
+    plugin(schema, _documents, config) {
         var _a, _b;
         const queryFields = Object.keys((_a = schema.getQueryType()) === null || _a === void 0 ? void 0 : _a['_fields']);
         const mutationFields = Object.keys((_b = schema.getMutationType()) === null || _b === void 0 ? void 0 : _b['_fields']);

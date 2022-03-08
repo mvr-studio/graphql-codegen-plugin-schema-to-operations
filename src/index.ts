@@ -8,7 +8,7 @@ interface Config {
 }
 
 module.exports = {
-  plugin: (schema: GraphQLSchema, _documents: Types.DocumentFile[], config: Config) => {
+  plugin(schema: GraphQLSchema, _documents: Types.DocumentFile[], config: Config) {
     const queryFields = Object.keys(schema.getQueryType()?.['_fields'])
     const mutationFields = Object.keys(schema.getMutationType()?.['_fields'])
     const queries = queryFields
